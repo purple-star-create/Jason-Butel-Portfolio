@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- type de document, encodage des caractères -->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<!-- empêcher le référencement -->
+		<meta name="robots" content="noindex, nofollow, noarchive" />
+		<!-- pour les mobiles -->
+		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
+		<!-- titre affiché dans l'onglet du navigateur et sur les moteurs de recherche -->
+		<title>Jason Butel</title>
+		<link rel="icon" href="images/iconbis.JPG" type="image/jpg">
+		<!-- texte de description affiché par les moteurs de recherche -->
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- liens vers les fichiers et librairies JavaScript -->
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="js/script.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" ></script>
+		<script>
+		const pages = new Map([
+			["page1", { titre: "Série : 36 vues du Mont Fuji - 2021", text: " Cette réédition du roman de Roald Dahl m'a permis de réimaginer l'univers de Charlie en jouant avec la typo, la mise en page ainsi que l'iconographie. Je me suis amusée à faire ces choix pour montrer le contexte historique. La majorité des images sont tirées de catalogues de brocante appartenant à ma mère (qui est british). C'était un plaisir de traduire visuellement ce texte si vivant et magique que j'ai connu toute mon enfance.", content: 
+			[{ image: "images/photos/36_vues/visuel_2.webp" },
+			{ image: "images/photos/36_vues/visuel_3.webp" },
+			{ image: "images/photos/36_vues/visuel_4.webp" },
+			{ image: "images/photos/36_vues/visuel_5.webp" },
+			{ image: "images/photos/36_vues/visuel_6.webp" },
+			{ image: "images/photos/36_vues/visuel_7.webp" },
+			{ image: "images/photos/36_vues/visuel_8.webp" },
+			{ image: "images/photos/36_vues/visuel_9.webp" },
+			{ image: "images/photos/36_vues/visuel_10.webp" },
+			{ image: "images/photos/36_vues/visuel_11.webp" },
+			{ image: "images/photos/36_vues/visuel_12.webp" }
+			], 
+			index: index }],
+		
+			["page2", { titre: "Série : Voiture - 2025", text: "Dans le cadre de la licence pro, j'ai fait une recherche documentaire sur les livres animés (livres pop-ups & autres) pour préparer mon projet de réédition *Charlie et la chocolaterie*. C'était très intéressant de trouver des références de livres avec des formes originales, puis de les organiser dans des chapitres et de les commenter. J'ai aussi beaucoup aimé la fabrication du livre en ajoutant des éléments pop-ups ainsi que du papier coloré et des rabats pour mettre en pratique toute ma recherche.", content: 
+			[{ image: "images/photos/voiture/visuel_2.webp" },
+			{ image: "images/photos/voiture/visuel_3.webp" },
+			{ image: "images/photos/voiture/visuel_4.webp" },
+			{ image: "images/photos/voiture/visuel_5.webp" }
+			], 
+			index: index }],
+
+			["page3", { titre: "Série : Nana - 2019", text: "En sortant des beaux-arts lorsque je cherchais un emploi, j'ai décidé de me lancer dans le projet de créer cet album jeunesse. J'ai vu en Angleterre qu'il existait des jardins partagés où des familles logeant en appartement pouvaient venir jardiner dans des espaces verts dédiés. C'était bien de voir qu'on pouvait être dans la nature à n'importe quelle échelle même en ville et l'impact positif que ça avait. Je me suis dit que ce serait un bon message à transmettre dans un album pour enfants. J'ai écrit l'histoire et fait des illustrations à la gouache, l'aquarelle et aux crayons de couleur.", content: 
+			[{ image: "images/photos/nana/visuel_2.webp" },
+			{ image: "images/photos/nana/visuel_3.webp" },
+			{ image: "images/photos/nana/visuel_4.webp" },
+			{ image: "images/photos/nana/visuel_5.webp" },
+			{ image: "images/photos/nana/visuel_6.webp" },
+			{ image: "images/photos/nana/visuel_7.webp" }
+			], 
+			index: index }],
+
+			["page4", { titre: "Série : Désert - 2024", text: "En licence pro, ma classe a eu la chance d'assister à une semaine de workshop édition avec Laurel Parker. On a été enseigné différentes méthodes de reliure dont la reliure cousue en trois points, le leporello et la reliure japonaise. ", content: 
+			[{ image: "images/photos/desert/visuel_4.webp" },
+			{ image: "images/photos/desert/visuel_3.webp" },
+			{ image: "images/photos/desert/visuel_2.webp" }
+			], 
+			index: index }],
+
+			["page5", { titre: "Série : Rennes sous les eaux - 2025", lien:"Lien vers le site", text: "Ce site créé aux alentours de Halloween est un jeu de cache-cache où il faut trouver le corbeau dans un univers gothique inspiré de mes lectures. Find the crow...if you dare !", content: 
+			[{ image: "images/photos/rennes_sous_les_eaux/visuel_2.webp" },
+			{ image: "images/photos/rennes_sous_les_eaux/visuel_3.webp" },
+			{ image: "images/photos/rennes_sous_les_eaux/visuel_4.webp" },
+			{ image: "images/photos/rennes_sous_les_eaux/visuel_5.webp" },
+			{ image: "images/photos/rennes_sous_les_eaux/visuel_6.webp" },
+			{ image: "images/photos/rennes_sous_les_eaux/visuel_7.webp" },
+			{ image: "images/photos/rennes_sous_les_eaux/visuel_8.webp" }
+			], 
+			index: index }],
+
+			["page6", { titre: "Série : Danse - 2019", text: "*Atelier* est une bibliothèque digitale pour le design graphique où j'ai voulu rassembler toutes mes ressources car mes notes sont éparpillées dans plein de carnets différents dans la vraie vie. Ce site est constituée d'une sitothèque webdesign, une liste de fonderies typo, des outils et tutos utiles, de références artistiques et graphiques rassemblées de mes notes des beaux-arts et mes recherches sur le design graphique. *Atelier* me sert pour trouver de l'inspiration et à créer de nouveaux projets.", content: 
+			[{ image: "images/photos/danse/visuel_2.webp" },
+			{ image: "images/photos/danse/visuel_3.webp" },
+			{ image: "images/photos/danse/visuel_4.webp" },
+			{ image: "images/photos/danse/visuel_5.webp" },
+			{ image: "images/photos/danse/visuel_6.webp" },
+			{ image: "images/photos/danse/visuel_7.webp" },
+			{ image: "images/photos/danse/visuel_8.webp" },
+			{ image: "images/photos/danse/visuel_9.webp" },
+			{ image: "images/photos/danse/visuel_10.webp" },
+			{ image: "images/photos/danse/visuel_11.webp" }
+			], 
+			index: index }],
+
+			["page7", { titre: "Série : Famille - 2018", text: "Ce site raconte mon expérience positive de mon stage chez Creative Seeds. Je partage comment c'était de travailler avec eux, mes découvertes sur le métier et les moments forts.", content: 
+			[{ image: "images/photos/famille/visuel_2.webp" },
+			{ image: "images/photos/famille/visuel_3.webp" },
+			{ image: "images/photos/famille/visuel_4.webp" },
+			{ image: "images/photos/famille/visuel_5.webp" },
+			{ image: "images/photos/famille/visuel_6.webp" },
+			{ image: "images/photos/famille/visuel_7.webp" },
+			{ image: "images/photos/famille/visuel_8.webp" },
+			{ image: "images/photos/famille/visuel_9.webp" },
+			{ image: "images/photos/famille/visuel_10.webp" },
+			{ image: "images/photos/famille/visuel_11.webp" },
+			{ image: "images/photos/famille/visuel_12.webp" },
+			{ image: "images/photos/famille/visuel_13.webp" },
+			{ image: "images/photos/famille/visuel_14.webp" }
+			], 
+			index: index }],
+
+			["page8", { titre: "Série : Poupée - 2018", text: "Ces gifs ont été dessinés pendant une période de confinement quand j'étais aux beaux-arts durant la pandémie. Ils dépictent des moments stagnants quand on avait des cours en visio, c'était bizarre comme période mais je suis contente car ça m'a fait découvrir une passion pour la vidéo et l'animation qui me suit jusqu'aujourd'hui.", content: 
+			[{ image: "images/photos/masques/visuel_2.webp" },
+			{ image: "images/photos/masques/visuel_3.webp" },
+			{ image: "images/photos/masques/visuel_4.webp" },
+			{ image: "images/photos/masques/visuel_5.webp" },
+			{ image: "images/photos/masques/visuel_6.webp" },
+			{ image: "images/photos/masques/visuel_7.webp" },
+			{ image: "images/photos/masques/visuel_8.webp" },
+			{ image: "images/photos/masques/visuel_9.webp" },
+			{ image: "images/photos/masques/visuel_10.webp" },
+			{ image: "images/photos/masques/visuel_11.webp" },
+			{ image: "images/photos/masques/visuel_12.webp" },
+			{ image: "images/photos/masques/visuel_13.webp" },
+			{ image: "images/photos/masques/visuel_14.webp" },
+			{ image: "images/photos/masques/visuel_15.webp" },
+			{ image: "images/photos/masques/visuel_16.webp" },
+			{ image: "images/photos/masques/visuel_17.webp" },
+			{ image: "images/photos/masques/visuel_18.webp" }
+			], 
+			index: index }],
+
+			["page9", { titre: "Série : Nana dans lieu abandonné - 2021", text: "Voici quelques supports imprimés de mon stage que j'ai fait pendant trois mois dans le pôle commuication de l'école d'animation 3D Creative Seeds à Cesson-Sévigné. J'ai conçu une gazette pour la communication interne de l'école. J'ai aussi créé des flyers pour les ateliers de l'école tout en utilisant l'identité visuelle de l'école et des brochures pour les deux court-métrages présentés au jury par les élèves de cinquième année.", content: 
+			[{ image: "images/photos/nana_lieu_abandonné/visuel_2.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_3.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_4.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_5.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_6.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_7.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_8.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_9.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_10.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_11.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_12.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_13.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_14.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_15.webp" },
+			{ image: "images/photos/nana_lieu_abandonné/visuel_16.webp" }
+			], 
+			index: index }],
+
+			["page10", { titre: "Série : Halloween - 2025", text: "Voici quelques supports imprimés de mon stage que j'ai fait pendant trois mois dans le pôle commuication de l'école d'animation 3D Creative Seeds à Cesson-Sévigné. J'ai conçu une gazette pour la communication interne de l'école. J'ai aussi créé des flyers pour les ateliers de l'école tout en utilisant l'identité visuelle de l'école et des brochures pour les deux court-métrages présentés au jury par les élèves de cinquième année.", content: 
+			[{ image: "images/photos/halloween/visuel_1.webp" },
+			{ image: "images/photos/halloween/visuel_2.webp" },
+			{ image: "images/photos/halloween/visuel_3.webp" },
+			{ image: "images/photos/halloween/visuel_4.webp" },
+			{ image: "images/photos/halloween/visuel_5.webp" },
+			{ image: "images/photos/halloween/visuel_6.webp" },
+			{ image: "images/photos/halloween/visuel_7.webp" },
+			{ image: "images/photos/halloween/visuel_8.webp" },
+			{ image: "images/photos/halloween/visuel_9.webp" }
+			], 
+			index: index }],
+		
+		]);
+
+		function index() {
+        	return ++window['INDEX']||(window['INDEX']=0);
+        }
+		</script>
+
+		<script id="page-template" type="x-tmpl-mustache">
+			<div class="titre-template">{{titre}}</div>
+			<div class="text-template">{{text}}</div>
+
+			<section class="carousel">
+			{{#content}}
+			<div><img id="img{{index}}" class="portfolio" src="{{image}}">
+			<p>{{mini_text}}</p></div>
+			{{/content}}
+
+			</section>
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const queryString = window.location.search;
+				const urlParams = new URLSearchParams(queryString);
+				const page = urlParams.get('page');
+				const template = document.getElementById('page-template').innerHTML;
+				const rendered = Mustache.render(template, pages.get(page));
+				document.getElementById('content').innerHTML = rendered;
+
+				const images = document.querySelectorAll("img.portfolio");
+				images.forEach((image, index) => {
+					image.addEventListener("click", (event) => {
+						modal = document.getElementById("myModal");
+						modalImg = document.getElementById("modalContent");
+						span = document.getElementsByClassName("close")[0];
+						modal.style.display = "block";
+      					modalImg.src = event.target.getAttribute("src");
+      					span.onclick = function() {
+      						modal = document.getElementById("myModal");
+      						modal.style.display = "none";
+    					}
+					});
+				})
+
+				
+			});
+		</script>
+	</head>
+	<body>
+		<a id="top"></a>
+		<header>
+			<a class="retour" href="photographies.html">Retour</a>
+		</header>
+
+		<main id="content">
+			
+		</main>
+		
+		<div id="myModal" class="modal">
+
+			<!-- The Close Button -->
+			<span class="close">&times;</span>
+
+			<!-- Modal Content (The Image) -->
+			<img class="modal-content" id="modalContent">
+
+			<!-- Modal Caption (Image Text) -->
+			<div id="caption"></div>
+		</div>
+
+
+
+		<footer>
+			<ul class="footer_links">
+				<li> 
+					<a href="https://www.instagram.com/buteljay/" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+	  				<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+					</svg> Instagram</a> 
+				</li>
+
+				<li>
+					<a href="https://www.facebook.com/jay.butel.5" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+	  				<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+					</svg> Facebook </a>
+				</li>
+				
+				<li>
+					<a href="mailto:jason.butel05000@gmail.com" target="_blank"
+					>jason.butel05000@gmail.com</a>
+				</li>
+			</ul>
+			
+			<p>Codé avec &#9829; par <a href="https://purple-star-create.github.io/portfolio/" target="_blank">Alice Desruelle</a></p>
+		</footer>
+	</body>
+</html>
