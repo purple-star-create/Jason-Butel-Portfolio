@@ -384,8 +384,8 @@ ul{
   }
 
   .mobile_image{
-    height: 100vh;
-    width: auto;
+    height: auto;
+    width: 100vw;
     opacity: 1;
   }
 
