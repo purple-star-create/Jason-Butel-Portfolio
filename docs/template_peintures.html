@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- type de document, encodage des caractères -->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<!-- empêcher le référencement -->
+		<meta name="robots" content="noindex, nofollow, noarchive" />
+		<!-- pour les mobiles -->
+		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
+		<!-- titre affiché dans l'onglet du navigateur et sur les moteurs de recherche -->
+		<title>Peintures</title>
+		<link rel="icon" href="images/iconbis.JPG" type="image/jpg">
+		<!-- texte de description affiché par les moteurs de recherche -->
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- liens vers les fichiers et librairies JavaScript -->
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="js/script.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" ></script>
+		<script>
+		const pages = new Map([
+			["page1", { titre: "Série : Peintures Impressions - 2025", text: "", content: 
+			[{ image: "images/peintures_impression/visuel_6.webp", mini_text: "Ghost- 2025 - Peinture acrylique et impression numérique - 89 x 82 cm"},
+			{ image: "images/peintures_impression/visuel_2.webp", mini_text: "Clarté sourdee - 2025 - Peinture acrylique et impression numérique - 89 x 82 cm" },
+			{ image: "images/peintures_impression/visuel_3.webp", mini_text:"Ruine et Prolifération - 89 x 82 cm - Peinture acrylique et impression numérique - 2025" },
+			{ image: "images/peintures_impression/visuel_4.webp", mini_text: "Ceux qui restent - 89 x 82 cm - Peinture acrylique et impression numérique - 2025"},
+			{ image: "images/peintures_impression/visuel_5.webp", mini_text: "Sous les Eaux - 148 x 105 cm - Peinture acrylique et impression numérique - 2025" },
+		
+			], 
+			index: index }],
+		
+			["page2", { titre: "Peintures collages - 2025", text: "", content: 
+			[{ image: "images/peinture_collage/visuel_2.webp" , mini_text:"Soleil couchant - 2025 - 80 x 80 cm - Peinture acrylique et transfert photographique"},
+			{ image: "images/peinture_collage/visuel_3.webp" , mini_text:"After the Tornado - 2025 - Peinture acrylique et transfert photographique - 100 x 80 cm"},
+			{ image: "images/peinture_collage/visuel_4.webp", mini_text:"Ballons - 2025 - Peinture acrylique et transfert photographique" },
+			{ image: "images/peinture_collage/visuel_5.webp", mini_text:"Herbes froides - 2025 - Peinture acrylique et transfert photographique - 100 x 100 cm" },
+			{ image: "images/peinture_collage/visuel_6.webp", mini_text:"Colline - 2025 - Peinture acrylique et transfert photographique" },
+			{ image: "images/peinture_collage/visuel_7.webp", mini_text:"Fort Worth - 2025 - Peinture acrylique et transfert photographique"},
+			{ image: "images/peinture_collage/visuel_8.webp", mini_text:"Effacés - 2025 - Peinture acrylique et transfert photographique"}
+			], 
+			index: index }],
+
+			["page3", { titre: "Série Photomontages - 2018 à 2021", text: "", content: 
+			[{ image: "images/photomontages/visuel_15.webp" },
+			{ image: "images/photomontages/visuel_2.webp" },
+			{ image: "images/photomontages/visuel_3.webp" },
+			{ image: "images/photomontages/visuel_4.webp" },
+			{ image: "images/photomontages/visuel_5.webp" },
+			{ image: "images/photomontages/visuel_6.webp" },
+			{ image: "images/photomontages/visuel_7.webp" },
+			{ image: "images/photomontages/visuel_8.webp" },
+			{ image: "images/photomontages/visuel_9.webp" },
+			{ image: "images/photomontages/visuel_10.webp" },
+			{ image: "images/photomontages/visuel_11.webp" },
+			{ image: "images/photomontages/visuel_12.webp" },
+			{ image: "images/photomontages/visuel_13.webp" },
+			{ image: "images/photomontages/visuel_14.webp" }
+			], 
+			index: index }],
+
+			["page4", { titre: "Cactus - 2023", text: "", content: 
+			[{ image: "images/peintures/visuel_1bis.webp", mini_text:"Cactus - 2023 - Huile sur toile - 80 x 100 cm" },
+			], 
+			index: index }],
+
+			["page5", { titre: "Neige - 2022", text: "", content: 
+			[{ image: "images/peintures/visuel_2bis.webp", mini_text:"Neige - 2022- Huile/Acrylique sur toile - 80 x 100 cm" }
+			], 
+			index: index }],
+
+			["page6", { titre: "After The Fire - 2025", text: "", content: 
+			[{ image: "images/peintures/visuel_3bis.webp" , mini_text:"After The Fire - 2025 - Peinture acrylique et impression numérique - 80 x 70 cm" }
+			], 
+			index: index }],
+
+			["page7", { titre: "Pont - 2023", text: "", content: 
+			[{ image: "images/peintures/visuel_4bis.webp", mini_text:"Pont - 2023 - Huile sur toile - 80 x 100 cm" }
+			], 
+			index: index }],
+
+			["page8", { titre: "Gambettes - 2021", text: "", content: 
+			[{ image: "images/peintures/visuel_5bis.webp", mini_text:"Gambettes - 2021 - Huile sur toile - 110 x 160 cm" }
+			], 
+			index: index }],
+
+			["page9", { titre: "Espoir - 2022", text: "", content: 
+			[{ image: "images/peintures/visuel_6bis.webp", mini_text:"Espoir - 2022 - Huile sur bois - 80 x 100 cm" }
+			], 
+			index: index }],
+
+			["page10", { titre: "Sanglier - 2020", text: "", content: 
+			[{ image: "images/peintures/visuel_7bis.webp", mini_text:"Sanglier - 2020 - Acrylique sur bois - 80 x 140 cm" }
+			], 
+			index: index }],
+
+			["page11", { titre: "Laurie - 2020", text: "", content: 
+			[{ image: "images/peintures/visuel_8bis.webp", mini_text:"Laurie - 2020 - Acrylique sur papier - 110 x 200 cm" }
+			], 
+			index: index }],
+
+			["page12", { titre: "Goodbye - 2022", text: "", content: 
+			[{ image: "images/peintures/visuel_9bis.webp", mini_text:"Goodbye - 2022 - Huile/Acrylique sur toile - 80 x 100 cm" }
+			], 
+			index: index }],
+
+			["page13", { titre: "Arizona - 2022", text: "", content: 
+			[{ image: "images/peintures/visuel_10bis.webp", mini_text:"Arizona - 2022 - Huile sur toile - 70 x 90 cm" }
+			], 
+			index: index }],
+
+			["page14", { titre: "Patinoire - 2021", text: "", content: 
+			[{ image: "images/peintures/visuel_11bis.webp", mini_text:"Patinoire - 2021 - Acrylique sur papier - 42 x 59 cm" }
+			], 
+			index: index }],
+
+			["page15", { titre: "Le Bruit du Silence - 2020", text: "", content: 
+			[{ image: "images/peintures/visuel_12bis.webp", mini_text:"Le Bruit du Silence - 2020 - Acrylique sur toile - 250 x 400 cm" }
+			], 
+			index: index }],
+
+			["page16", { titre: "Dans les Bois - 2020", text: "", content: 
+			[{ image: "images/peintures/visuel_13bis.webp", mini_text:"Dans les Bois - 2020 - Acrylique sur papier - 90 x 150 cm" }
+			], 
+			index: index }],
+
+			["page17", { titre: "Naufrage - 2020", text: "", content: 
+			[{ image: "images/peintures/visuel_14bis.webp", mini_text:"Naufrage - 2020 - Acrylique sur bois - 60 x 130 cm" }
+			], 
+			index: index }],
+
+			["page18", { titre: "Cabane - 2021", text: "", content: 
+			[{ image: "images/peintures/visuel_15bis.webp", mini_text:"Cabane - 2021 - Acrylique et pastel sec sur papier - 29 x 42 cm" }
+			], 
+			index: index }],
+
+			["page19", { titre: "Bateau - 2023", text: "", content: 
+			[{ image: "images/peintures/visuel_16bis.webp", mini_text:"Bateau - 2023 - Huile sur toile - 80 x 100 cm" }
+			], 
+			index: index }],
+		
+		]);
+
+		function index() {
+        	return ++window['INDEX']||(window['INDEX']=0);
+        }
+		</script>
+
+		<script id="page-template" type="x-tmpl-mustache">
+			<div class="titre-template">{{titre}}</div>
+			<div class="text-template">{{text}}</div>
+
+			<section class="carousel">
+			{{#content}}
+			<div><img id="img{{index}}" class="portfolio" src="{{image}}">
+			<p>{{mini_text}}</p></div>
+			{{/content}}
+
+			</section>
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const queryString = window.location.search;
+				const urlParams = new URLSearchParams(queryString);
+				const page = urlParams.get('page');
+				const template = document.getElementById('page-template').innerHTML;
+				const rendered = Mustache.render(template, pages.get(page));
+				document.getElementById('content').innerHTML = rendered;
+
+				const images = document.querySelectorAll("img.portfolio");
+				images.forEach((image, index) => {
+					image.addEventListener("click", (event) => {
+						modal = document.getElementById("myModal");
+						modalImg = document.getElementById("modalContent");
+						span = document.getElementsByClassName("close")[0];
+						modal.style.display = "block";
+      					modalImg.src = event.target.getAttribute("src");
+      					span.onclick = function() {
+      						modal = document.getElementById("myModal");
+      						modal.style.display = "none";
+    					}
+					});
+				})
+
+				
+			});
+		</script>
+	</head>
+	<body>
+		<a id="top"></a>
+		<header>
+			<a class="retour" href="peintures.html">Retour</a>
+		</header>
+
+		<main id="content">
+			
+		</main>
+		
+		<div id="myModal" class="modal">
+
+			<!-- The Close Button -->
+			<span class="close">&times;</span>
+
+			<!-- Modal Content (The Image) -->
+			<img class="modal-content" id="modalContent">
+
+			<!-- Modal Caption (Image Text) -->
+			<div id="caption"></div>
+		</div>
+
+
+
+		<footer>
+			<ul class="footer_links">
+				<li> 
+					<a href="https://www.instagram.com/buteljay/" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+	  				<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+					</svg> Instagram</a> 
+				</li>
+
+				<li>
+					<a href="https://www.facebook.com/jay.butel.5" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+	  				<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+					</svg> Facebook </a>
+				</li>
+				
+				<li>
+					<a href="mailto:jason.butel05000@gmail.com" target="_blank"
+					>jason.butel05000@gmail.com</a>
+				</li>
+			</ul>
+			
+			<p>Codé avec &#9829; par <a href="https://purple-star-create.github.io/portfolio/" target="_blank">Alice Desruelle</a></p>
+		</footer>
+	</body>
+</html>

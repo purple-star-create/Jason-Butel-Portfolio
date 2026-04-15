@@ -351,24 +351,126 @@ ul{
 /* COMPUTER/BIG SCREENS
 /* ----------------------------- */
 
+/* ----------------------------- */
+/* RESPONSIVE MOBILE
+/* ----------------------------- */
+
 @media screen and (max-width: 768px){
-  .content h1{
-    font-size: 250%;
+
+  .content{
+    position: absolute;
+    top: 40%;
+    left: 26%;
+    margin: 0;
   }
+
+  .content h1{
+    font-size: 200%;
+    margin: 0;
+  }
+
+  .content h2{
+    font-size: 150%;
+    margin: 0.5em;
+  }
+
+  .splide__slide img {
+    height: 100%;
+    width: auto;
+  }
+
   .btn{
-    font-size: 110%;
+    margin: 5px;
+    font-size: 45%;
     padding: 7px 15px;
   }
+
+  .buttons{
+    padding: 50px;
+  }
+
+  .titre{
+    font-size: 110%;
+  }
+
+  .titre{
+    padding-top: 10vw;
+  }
+
+  .titre-template{
+    padding-top: 8vw;
+    font-size: 80%;
+    padding-left: 0vw;
+    padding-right: 0vw;
+  }
+
+  .text{
+    font-size: 80%;
+  }
+
+  .btn_menu{
+    margin: 5px;
+    font-size: 45%;
+    padding: 7px 15px;
+  }
+
+  .menu{
+    width: 100vw;
+  }
+
   p{
     line-height: 100%;
     font-size: 100%;
+  }
+
+  .peintures{
+    width: 90vw;
+  }
+
+  .carousel img{
+    max-width: 85vw;
+  }
+
+  .carousel p{
+    font-size: 70%;
+    max-width: 85vw;
   }
 
   .page{
     grid-template-columns: 1fr;
     margin: 0.5vw auto;
     max-width: 90vw;  
+    padding: 0vw;
+  }
+
+  .retour{
+    padding: 4vw;
+    margin: 0vw;
+    font-size: 50%;
+  }
+
+  footer{
+    font-size: 70%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  svg{
+    height: 8px;
+  }
+
+  li{
+    margin: 5px;
+  }
+
+  ul{
+    padding: 0vw;
+  }
+
+  footer p{
+    font-size: 50%;
   }
 }
+
 
 
