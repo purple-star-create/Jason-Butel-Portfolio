@@ -48,10 +48,14 @@ body{
   text-shadow: 0px 0px 5px #000;
 }
 
-.buttons{
-  display: flex;
+.buttons div{
+  text-align: center;
+  margin: 3em;
+}
+
+.buttons{ 
   justify-content: center;
-  padding: 300px;
+  padding: 10em;
   background: url("../images/paysage_bleu.webp");
   background-size: cover;
 }
@@ -396,10 +400,13 @@ ul{
     padding: 0;
   }
 
+  .buttons div{
+  text-align: center;
+  margin: 2em;
+}
+
   .buttons{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px;
+    padding: 2em;
     height: 60vh;
   }
 
