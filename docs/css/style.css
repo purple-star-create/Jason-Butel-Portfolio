@@ -105,6 +105,7 @@ body{
   display: flex;
   justify-content: space-between;
   background-color: #ebf7f7;
+  z-index: 1;
 
 }
 
@@ -127,6 +128,12 @@ body{
 /* PEINTURES & PHOTOGRAPHIES
 /* ----------------------------- */
 
+.mouse{
+  position: relative;
+}
+
+
+
 .titre{
   font-family: 'Oswald', sans-serif;
   font-size: 350%;
@@ -134,10 +141,20 @@ body{
   padding-left: 2vw;
 }
 
-.text{
-  padding-top: 0.4em;
-  padding-bottom: 0.4em;
+.text_voir{
   font-family: 'Raleway', sans-serif;
+  position: relative;
+  bottom: 9%;
+  font-size: 90%;
+  text-align: center;
+}
+
+.text{
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  bottom: 9%;
+  font-size: 110%;
+  text-align: center;
 } 
 
 .carousel p{
@@ -147,9 +164,12 @@ body{
 }
 
 .container{
-  margin: 0.8vw;
   top: 10%;
   cursor: pointer;
+}
+
+.gros_container{
+  margin: auto;
 }
 
 .page{
@@ -403,18 +423,17 @@ ul{
   .buttons div{
   text-align: center;
   margin: 2em;
-}
+  }
 
   .buttons{
     padding: 2em;
     height: 60vh;
   }
 
-  .titre{
-    font-size: 200%;
-  }
+  
 
   .titre{
+    font-size: 200%;
     padding-top: 10vw;
   }
 
@@ -450,6 +469,10 @@ ul{
   }
 
   .text{
+    font-size: 90%;
+  }
+
+  .text_voir{
     font-size: 80%;
   }
 
