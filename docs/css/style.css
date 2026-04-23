@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 
 p{
   margin: 0;
@@ -22,6 +21,28 @@ html, body{
 body{
   background-color: #ebf7f7;
 }
+
+
+/* ----------------------------- */
+/* TYPO
+/* ----------------------------- */
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: bold;
+    font-display: swap;
+}
+
 
 /* ----------------------------- */
 /* ACCUEIL
