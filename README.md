@@ -1,5 +1,5 @@
 # Artist Portfolio
-<img width="1895" height="911" alt="image" src="https://github.com/user-attachments/assets/dbd34c96-b047-4c6b-868b-7c196ba2e727" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/dbd34c96-b047-4c6b-868b-7c196ba2e727" />
 
 ## Link :
 https://www.jasonbutel.fr/
